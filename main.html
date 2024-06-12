@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSN Computer Countdown</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+</head>
+
+<body>  
+    <h1>POSN COMPUTER COUNTDOWN</h1>
+    <table id="countdown">
+        <tr id="countdown-timer">
+            <td><span id="days">x</span></td>
+            <td><span id="hours">x</span></td>
+            <td><span id="minutes">x</span></td>
+            <td><span id="seconds">x</span></td>
+        </tr>
+        <tr id="countdown-labels">
+            <td><span>days</span></td>
+            <td><span>hours</span></td>
+            <td><span>minutes</span></td>
+            <td><span>seconds</span></td>
+        </tr>
+    </table>
+
+    <script>
+        const storeOpening = new Date('aug 25, 2024 13:00:00');
+
+        function setCountdown(countingDownTime) {
+            let now = new Date();
+            let timeRemaining = countingDownTime - now;
+
+            let seconds = Math.floor(timeRemaining / 1000);
+            let minutes = Math.floor(timeRemaining / (1000 * 60));
+            let hours = Math.floor(timeRemaining / (1000 * 60 * 60));
+            let days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+
+            let daysToDisplay = days;
+            let hoursToDisplay = hours - (days * 24);
+            let minutesToDisplay = minutes - (hours * 60);
+            let secondsToDisplay = seconds - (minutes * 60);
+
+            document.getElementById('days').textContent = daysToDisplay;
+            document.getElementById('hours').textContent = hoursToDisplay;
+            document.getElementById('minutes').textContent = minutesToDisplay;
+            document.getElementById('seconds').textContent = secondsToDisplay;
+        }
+
+        setCountdown(storeOpening);
+        setInterval(() => {
+            setCountdown(storeOpening);
+        }, 1000);
+    </script>
+</body>
+
+</html>
