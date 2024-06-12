@@ -81,6 +81,10 @@ h1 {
 
 /* Media query for small mobile devices */
 @media (max-width: 480px) {
+    body {
+        padding-top: 5%;
+    }
+
     h1 {
         font-size: 1rem;
     }
@@ -91,11 +95,16 @@ h1 {
 
     #countdown-timer span, #countdown-labels span {
         padding: 0.4rem;
+        margin: 0.2rem 0;
     }
 }
 
 /* Media query for extra small mobile devices */
 @media (max-width: 360px) {
+    body {
+        padding-top: 3%;
+    }
+
     h1 {
         font-size: 0.9rem;
     }
@@ -106,5 +115,6 @@ h1 {
 
     #countdown-timer span, #countdown-labels span {
         padding: 0.3rem;
+        margin: 0.1rem 0;
     }
 }
