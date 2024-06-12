@@ -1,9 +1,5 @@
-.tiny5-regular {
-    font-family: "Tiny5", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
+/* Importing the font */
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
 
 body {
     display: flex;
@@ -11,7 +7,7 @@ body {
     padding-top: 15%;
     font-family: "Tiny5", sans-serif;
     margin: 0;
-    text-align: center;
+    text-align: center; /* Center align text for all devices */
 }
 
 h1 {
@@ -20,6 +16,7 @@ h1 {
 }
 
 #countdown {
+    font-size: 2rem;
     text-align: center;
     margin: 1rem;
 }
@@ -34,9 +31,9 @@ h1 {
     padding: 1rem;
     width: 100px;
     margin: 0.5rem;
-    font-size: 2rem; /* Default font size for larger screens */
 }
 
+/* Media query for tablets */
 @media (max-width: 768px) {
     body {
         padding-top: 10%;
@@ -54,10 +51,10 @@ h1 {
         width: 80px;
         padding: 0.8rem;
         margin: 0.3rem;
-        font-size: 1.6rem; /* Adjusted font size for medium screens */
     }
 }
 
+/* Media query for mobile devices */
 @media (max-width: 600px) {
     body {
         padding-top: 8%;
@@ -68,50 +65,46 @@ h1 {
     }
 
     #countdown {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     #countdown-timer, #countdown-labels {
-        display: block;
+        display: block; /* Stack elements vertically */
     }
 
     #countdown-timer span, #countdown-labels span {
         width: 100%;
-        padding: 0.5rem;
-        margin: 0.2rem 0;
-        font-size: 1.2rem; /* Adjusted font size for small screens */
+        padding: 0.6rem;
+        margin: 0.2rem 0; /* Vertical margin */
     }
 }
 
+/* Media query for small mobile devices */
 @media (max-width: 480px) {
     h1 {
         font-size: 1rem;
     }
 
     #countdown {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     #countdown-timer span, #countdown-labels span {
         padding: 0.4rem;
-        font-size: 1rem; /* Adjusted font size for very small screens */
     }
 }
 
+/* Media query for extra small mobile devices */
 @media (max-width: 360px) {
     h1 {
         font-size: 0.9rem;
     }
 
     #countdown {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     #countdown-timer span, #countdown-labels span {
         padding: 0.3rem;
-        font-size: 0.9rem; /* Adjusted font size for the smallest screens */
     }
 }
-```
-
-By setting different font sizes for the countdown numbers based on screen width, you ensure that the text remains readable and appropriately sized across various devices. The use of media queries helps in applying specific styles for different screen sizes, ensuring a responsive design.
