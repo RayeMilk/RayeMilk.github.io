@@ -1,6 +1,10 @@
-To make the countdown numbers responsive as well, you'll need to adjust their size based on the screen width. This can be achieved by using `vw` (viewport width) units in your CSS for the font sizes of the countdown numbers. Here is the updated CSS that includes these changes:
+.tiny5-regular {
+    font-family: "Tiny5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 
-```css
 body {
     display: flex;
     justify-content: center;
