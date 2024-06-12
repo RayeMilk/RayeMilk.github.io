@@ -1,17 +1,13 @@
-.tiny5-regular {
-    font-family: "Tiny5", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
+To make the countdown numbers responsive as well, you'll need to adjust their size based on the screen width. This can be achieved by using `vw` (viewport width) units in your CSS for the font sizes of the countdown numbers. Here is the updated CSS that includes these changes:
 
+```css
 body {
     display: flex;
     justify-content: center;
     padding-top: 15%;
     font-family: "Tiny5", sans-serif;
     margin: 0;
-    text-align: center; /* Center align text for all devices */
+    text-align: center;
 }
 
 h1 {
@@ -20,7 +16,6 @@ h1 {
 }
 
 #countdown {
-    font-size: 2rem;
     text-align: center;
     margin: 1rem;
 }
@@ -35,6 +30,7 @@ h1 {
     padding: 1rem;
     width: 100px;
     margin: 0.5rem;
+    font-size: 2rem; /* Default font size for larger screens */
 }
 
 @media (max-width: 768px) {
@@ -54,6 +50,7 @@ h1 {
         width: 80px;
         padding: 0.8rem;
         margin: 0.3rem;
+        font-size: 1.6rem; /* Adjusted font size for medium screens */
     }
 }
 
@@ -71,13 +68,14 @@ h1 {
     }
 
     #countdown-timer, #countdown-labels {
-        display: block; /* Stack elements vertically */
+        display: block;
     }
 
     #countdown-timer span, #countdown-labels span {
         width: 100%;
         padding: 0.5rem;
-        margin: 0.2rem 0; /* Vertical margin */
+        margin: 0.2rem 0;
+        font-size: 1.2rem; /* Adjusted font size for small screens */
     }
 }
 
@@ -92,6 +90,7 @@ h1 {
 
     #countdown-timer span, #countdown-labels span {
         padding: 0.4rem;
+        font-size: 1rem; /* Adjusted font size for very small screens */
     }
 }
 
@@ -106,5 +105,9 @@ h1 {
 
     #countdown-timer span, #countdown-labels span {
         padding: 0.3rem;
+        font-size: 0.9rem; /* Adjusted font size for the smallest screens */
     }
 }
+```
+
+By setting different font sizes for the countdown numbers based on screen width, you ensure that the text remains readable and appropriately sized across various devices. The use of media queries helps in applying specific styles for different screen sizes, ensuring a responsive design.
