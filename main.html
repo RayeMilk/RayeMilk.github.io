@@ -13,20 +13,24 @@
 
 <body>  
     <h1>POSN COMPUTER COUNTDOWN</h1>
-    <table id="countdown">
-        <tr id="countdown-timer">
-            <td><span id="days">x</span></td>
-            <td><span id="hours">x</span></td>
-            <td><span id="minutes">x</span></td>
-            <td><span id="seconds">x</span></td>
-        </tr>
-        <tr id="countdown-labels">
-            <td><span>days</span></td>
-            <td><span>hours</span></td>
-            <td><span>minutes</span></td>
-            <td><span>seconds</span></td>
-        </tr>
-    </table>
+    <div id="countdown">
+        <div class="countdown-item">
+            <span id="days">x</span>
+            <span class="label">days</span>
+        </div>
+        <div class="countdown-item">
+            <span id="hours">x</span>
+            <span class="label">hours</span>
+        </div>
+        <div class="countdown-item">
+            <span id="minutes">x</span>
+            <span class="label">minutes</span>
+        </div>
+        <div class="countdown-item">
+            <span id="seconds">x</span>
+            <span class="label">seconds</span>
+        </div>
+    </div>
 
     <script>
         const storeOpening = new Date('aug 25, 2024 13:00:00');
